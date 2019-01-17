@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <title>Alex Weavers: Full-Stack Developer Portfolio</title>
+</head>
+
+<body>
+  <div class="text-center splash">
+    <div class="profile-pic"></div>
+  </div>
+
+  <ul class="tech mx-0 my-0 py-3 px-0">
+    <li>
+      <img src="img/python.svg" class="tech-icon">
+    </li>
+    <li>
+      <img src="img/django.svg" class="tech-icon">
+    </li>
+    <li></li>
+    <li></li>
+    <li>
+      <img src="img/nodejs.svg" class="tech-icon">
+    </li>
+    <li>
+      <img src="img/angular.svg" class="tech-icon">
+    </li>
+  </ul>
+  <div class="container w-100">
+    <div class="row">
+      <div class="col-md-8 text-center mx-0 px-0">
+        <div class="mx-auto py-5">
+          <h1 class="title slab">Full-Stack<br>Developer</h1>
+        </div>
+      </div>
+      <div class="col-md-4 contact py-5 mx-0 px-0">
+        <h5 class="slab">Contact</h5>
+        <a href="mailto:ajdweavers@gmail.com">
+          ajdweavers@gmail.com
+        </a>
+        <br>
+        <br>
+        <br> LinkedIn:
+        <a href="https://www.linkedin.com/in/alexander-weavers-4a81a181/">
+          <img class="icon" src="img/linkedin.svg"></a>
+        <br> GitHub:
+        <a href="https://www.github.com/awildtechno">
+          <img class="icon" src="img/github.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2 class="slab">My Projects</h2>
+        </div>
+        <div class="card-body" id="project-container">
+          <button class="project" data-toggle="collapse" data-target="#proj1">
+
+          </button>
+          <button class="project" data-toggle="collapse" data-target="#proj2">
+
+          </button>
+          <button class="project" data-toggle="collapse" data-target="#proj3">
+
+          </button>
+          <button class="project" data-toggle="collapse" data-target="#proj4">
+
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body bg-light border-bottom" id="project-dropdown">
+      <div class="collapse" data-parent="#project-dropdown" id="proj1">
+        <div>
+          <h3>Django: Sticky Note Issue Tracker</h3>
+          <p>This project tracks things like issues and feature requests, categorizes them, and then allows users to either follow or take ownership of the issue. I went for a sticky-note visualization to each issue object. Now your digital office can feel just as cluttered as your real office!</p>
+
+          <h4>Key Elements</h4>
+          <ul class="d-flex flex-wrap flex-align-center">
+            <li class="my-1">
+              Full-CRUD Issue Tracker
+            </li>
+            <li class="my-1">
+              Full API using <a href="https://www.django-rest-framework.org/">Django REST Framework</a>
+            </li>
+            <li class="my-1">
+              Custom Admin Page
+            </li>
+            <li class="my-1">
+              Search by Category & Keyword
+            </li>
+            <li class="my-1">
+              AJAX Dropdown Suggestions
+            </li>
+            <li class="my-1">
+              Login/Registration
+            </li>
+            <li></li>
+            <li>
+              Tracks its own issues!
+            </li>
+            <li></li>
+          </ul>
+
+          <h4>Status</h4>
+          Core features are complete. Design and other features under active development.
+
+          <h4>Technologies</h4>
+          <img src="img/django.svg" class="icon-2" alt="Django Logo">
+          <img src="img/django-rest-framework.png" class="icon-2" alt="Django REST Framework">
+          <img src="img/sqlite.svg" class="icon-2" alt="SQL logo">
+          <img src="img/jquery.png" class="icon-2" alt="jQuery logo">
+        </div>
+      </div>
+      <div class="collapse" data-parent="#project-dropdown" id="proj2">
+        <div>
+          <h3><% proj.name %></h3>
+          <p><% proj.description %></p>
+
+          <h4>Key Elements</h4>
+          <ul class="d-flex flex-wrap flex-align-center">
+            <% for (ele of proj.key_elements) { %>
+            <li class="my-1">
+              <%- ele %>
+            </li>
+            <% } %>
+          </ul>
+
+          <h4>Status</h4>
+          <%= proj.status %>
+
+          <h4>Technologies</h4>
+          <% for (tech of proj.technologies) { %>
+            <img src="img/ icons[tech] " class="icon-2" alt="<%= tech %> Logo">
+          <% } %>
+        </div>
+      </div>
+      <div class="collapse" data-parent="#project-dropdown" id="proj3">
+        <div>Wiwi</div>
+      </div>
+      <div class="collapse" data-parent="#project-dropdown" id="proj4">
+        <div>Nini</div>
+      </div>
+    </div>
+
+    <div class="container py-5" id="acc-parent">
+      <ul class="nav nav-tabs nav-fill">
+        <li class="nav-item">
+          <button class="clean" data-toggle="collapse" data-target="#acc-welcome">
+            <h4 class="slab">Welcome!</h4>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="clean" data-toggle="collapse" data-target="#acc-history">
+            <h4 class="slab">History</h4>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="clean" data-toggle="collapse" data-target="#acc-aboutme">
+            <h4 class="slab">About Me</h4>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="clean" data-toggle="collapse" data-target="#acc-quali">
+            <h4 class="slab">Qualifications</h4>
+          </button>
+        </li>
+      </ul>
+      <div>
+        <div class="collapse show" id="acc-welcome" data-parent="#acc-parent">
+          <div class="card-body">
+            Thanks for taking the time to view my profile. My name is Alex, and I'm a full-stack developer currently living in Las Vegas. I'm available for full-time work and am open to opportunities anywhere in the country. I'd also be happy to do remote work or
+            freelancing depending on the project.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="collapse" id="acc-aboutme" data-parent="#acc-parent">
+          <div class="card-body">
+            <p>I'm Alex! I live in Las Vegas, Nevada with my wonderful girlfriend. I'm an indoor cat, so you won't catch me anywhere near the lights or the bars downtown. I prefer to spend my time studying, cleaning, or working on something that catches
+              my interest. For relaxation, you'll find me on the tennis courts or playing board games with friends at <a href="https://www.meepleville.com/">Meepleville</a>.</p>
+            <p>My personality is mostly relaxed, slightly reserved, at times analytical. I don't let stress accumulate and I don't keep secrets. I sing along to a 90s alternative station while driving. I love animals of all kinds, especially dogs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="collapse" id="acc-history" data-parent="#acc-parent">
+          <div class="card-body">
+            <p>After several years of post-college content writing, I felt that my career prospects were weak and the compensation wasn't going to let me live out my dreams. I also didn't find writing templated SEO blurbs and product copy compelling. So,
+              when a friend explained his work as a developer to me, I simply said, "I could do that." He agreed, and a few months later, I accepted my first professional contract as a developer to reroute a client's SMS marketing service replies directly
+              to their phone.</p>
+            <p>I've been a hobbyist programmer for as long as I can remember. At around 12, I pulled my dad's C++ book off the shelf, installed the compiler on the included demo CD, and wrote my first <em>Hello World</em>. In high school, I programmed a
+              networked tic-tac-toe game on a lab computer, studied UNIX at the community college, and interned at a tech company. Throughout my adult life, I've made many little scripts or websites to help with my day-to-day work. It seems that wherever
+              I went in my career, software has helped me simplify my workflow and solve difficult problems. I'd like to bring that same experience to many more people by creating powerful, intuitive software.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="collapse" id="acc-quali" data-parent="#acc-parent">
+          <div class="card-body">
+            <p>I've been studying part time for about a year, and I am currently attending a <a href="http://www.coding-dojo.com">3-month full-time bootcamp</a> in San Jose to polish my skills. I'm studying 6-7 days a week for up to 12 hours a day, and every
+              day I will generally complete 1-2 proof-of-concept webpages on a subject of study.</p>
+            <p>I won't ask you to believe that I'm a gifted developer. Instead, I'll tell you that I'm here at the Dojo every day until closing. On days when it's closed, I'm at a cafe, typing away in an editor. The more I learn, the more it seems I can
+              learn.</p>
+            <p>That's why I've been working hard to lay the best foundation possible. I can now make a complete website with any desired features and full database support from scratch in multiple frameworks and programming languages. If you have an idea
+              for the web, I'm confident that I can make it into a complete, live product, <em>even if I've never worked with the technology stack you're using before.</em> I'd be happy to provide a code sample with any technology stack upon request.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-5 pt-4">
+    <div class="row justify-content-center">
+      <div class="col-3">
+        <ul>
+          <li>
+            Site Map
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/alexander-weavers-4a81a181/">Resume</a>
+          </li>
+          <li>
+            <a href="projects/python">Python Projects</a>
+          </li>
+          <li>
+            <a href="projects/node">Node.js Projects</a>
+          </li>
+          <li>
+            <a href="projects/angular">Angular.js Projects</a>
+          </li>
+          <li>
+            <a href="projects">All Projects</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <ul>
+          <li>
+            Contact
+          </li>
+          <li>
+            <a href="mailto:ajdweavers@gmail.com">Email</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/alexander-weavers-4a81a181/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/awildtechno">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright mt-4">
+      © Alex Weavers 2019
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/jquery.pause.min.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+
+</html>

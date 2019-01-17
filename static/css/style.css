@@ -1,0 +1,142 @@
+.splash {
+  width: 100%;
+  background-image: url("/img/splash-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 100%;
+  height: 32rem;
+}
+
+.profile-pic {
+  display: inline-block;
+  position: relative;
+  top: 12rem;
+  height: 24rem;
+  width: 24rem;
+  background-image: url("/img/profile-pic.jpg");
+  background-size: 100%;
+  background-position: center;
+  z-index: 50;
+  border: 3px solid whitesmoke;
+  border-radius: 50%;
+  box-shadow: 1px 4px 10px -2px black;
+}
+
+ul.d-flex {
+  padding: 0;
+  list-style: none;
+}
+
+ul.d-flex li {
+  flex-basis: 30%;
+}
+
+ul.tech {
+  background-color: steelblue;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+ul.tech li {
+  padding: 1rem;
+}
+
+.tech-icon {
+  height: 4rem;
+}
+
+div.contact {
+  background-color: lavenderblush;
+  text-align: center;
+}
+
+.slab {
+  font-family: "Roboto Slab", serif;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.icon {
+  height: 1.5rem;
+}
+
+.icon-2 {
+  height: 3rem;
+}
+
+button.clean {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0.25em;
+  background: none;
+  border: none;
+  transition: text-shadow 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+button.clean:active, button.clean:focus {
+  outline: none;
+}
+button.clean:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 1px #dadada;
+  color: #272727;
+}
+
+footer {
+  width: 100%;
+  background-color: orangered;
+  color: #f1dccf;
+  text-align: center;
+}
+
+footer div.copyright {
+  background-color: #e23c00;
+  color: #ff7842;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer a {
+  color: whitesmoke;
+}
+footer a:hover {
+  color: #f6debe;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div#project-container {
+  height: 16rem;
+}
+
+.project {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  bottom: 0px;
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  background-image: url("/img/github.jpg");
+}
+.project.active {
+  box-shadow: 0 0 8px 2px rgba(255, 68, 0, 0.5);
+}
+.project:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
