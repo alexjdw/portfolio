@@ -14,37 +14,35 @@
 <body>
   <div class="text-center splash">
     <div class="profile-pic"></div>
+    <ul class="tech mx-0 my-0 py-3 px-0">
+      <li>
+        <img src="img/python.svg" class="tech-icon">
+      </li>
+      <li>
+        <img src="img/django.svg" class="tech-icon">
+      </li>
+      <li></li>
+      <li></li>
+      <li>
+        <img src="img/nodejs.svg" class="tech-icon">
+      </li>
+      <li>
+        <img src="img/angular.svg" class="tech-icon">
+      </li>
+    </ul>
   </div>
-
-  <ul class="tech mx-0 my-0 py-3 px-0">
-    <li>
-      <img src="img/python.svg" class="tech-icon">
-    </li>
-    <li>
-      <img src="img/django.svg" class="tech-icon">
-    </li>
-    <li></li>
-    <li></li>
-    <li>
-      <img src="img/nodejs.svg" class="tech-icon">
-    </li>
-    <li>
-      <img src="img/angular.svg" class="tech-icon">
-    </li>
-  </ul>
-  <div class="container w-100">
-    <div class="row">
-      <div class="col-md-8 text-center mx-0 px-0">
+  <main class="m-auto px-3">
+    <div class="row my-0 fitfix">
+      <div class="col-md flex-grow-1 text-center mx-0 px-0">
         <div class="mx-auto py-5">
           <h1 class="title slab">Full-Stack<br>Developer</h1>
         </div>
       </div>
-      <div class="col-md-4 contact py-5 mx-0 px-0">
+      <div class="col-md-0 contact mx-0 py-5 px-5">
         <h5 class="slab">Contact</h5>
         <a href="mailto:ajdweavers@gmail.com">
           ajdweavers@gmail.com
         </a>
-        <br>
         <br>
         <br> LinkedIn:
         <a href="https://www.linkedin.com/in/alexander-weavers-4a81a181/">
@@ -54,103 +52,6 @@
           <img class="icon" src="img/github.png"></a>
       </div>
     </div>
-
-    <div>
-      <div class="card mt-5">
-        <div class="card-header">
-          <h2 class="slab">My Projects</h2>
-        </div>
-        <div class="card-body" id="project-container">
-          <button class="project" data-toggle="collapse" data-target="#proj1">
-
-          </button>
-          <button class="project" data-toggle="collapse" data-target="#proj2">
-
-          </button>
-          <button class="project" data-toggle="collapse" data-target="#proj3">
-
-          </button>
-          <button class="project" data-toggle="collapse" data-target="#proj4">
-
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-body bg-light border-bottom" id="project-dropdown">
-      <div class="collapse" data-parent="#project-dropdown" id="proj1">
-        <div>
-          <h3>Django: Sticky Note Issue Tracker</h3>
-          <p>This project tracks things like issues and feature requests, categorizes them, and then allows users to either follow or take ownership of the issue. I went for a sticky-note visualization to each issue object. Now your digital office can feel just as cluttered as your real office!</p>
-
-          <h4>Key Elements</h4>
-          <ul class="d-flex flex-wrap flex-align-center">
-            <li class="my-1">
-              Full-CRUD Issue Tracker
-            </li>
-            <li class="my-1">
-              Full API using <a href="https://www.django-rest-framework.org/">Django REST Framework</a>
-            </li>
-            <li class="my-1">
-              Custom Admin Page
-            </li>
-            <li class="my-1">
-              Search by Category & Keyword
-            </li>
-            <li class="my-1">
-              AJAX Dropdown Suggestions
-            </li>
-            <li class="my-1">
-              Login/Registration
-            </li>
-            <li></li>
-            <li>
-              Tracks its own issues!
-            </li>
-            <li></li>
-          </ul>
-
-          <h4>Status</h4>
-          Core features are complete. Design and other features under active development.
-
-          <h4>Technologies</h4>
-          <img src="img/django.svg" class="icon-2" alt="Django Logo">
-          <img src="img/django-rest-framework.png" class="icon-2" alt="Django REST Framework">
-          <img src="img/sqlite.svg" class="icon-2" alt="SQL logo">
-          <img src="img/jquery.png" class="icon-2" alt="jQuery logo">
-        </div>
-      </div>
-      <div class="collapse" data-parent="#project-dropdown" id="proj2">
-        <div>
-          <h3><% proj.name %></h3>
-          <p><% proj.description %></p>
-
-          <h4>Key Elements</h4>
-          <ul class="d-flex flex-wrap flex-align-center">
-            <% for (ele of proj.key_elements) { %>
-            <li class="my-1">
-              <%- ele %>
-            </li>
-            <% } %>
-          </ul>
-
-          <h4>Status</h4>
-          <%= proj.status %>
-
-          <h4>Technologies</h4>
-          <% for (tech of proj.technologies) { %>
-            <img src="img/ icons[tech] " class="icon-2" alt="<%= tech %> Logo">
-          <% } %>
-        </div>
-      </div>
-      <div class="collapse" data-parent="#project-dropdown" id="proj3">
-        <div>Wiwi</div>
-      </div>
-      <div class="collapse" data-parent="#project-dropdown" id="proj4">
-        <div>Nini</div>
-      </div>
-    </div>
-
     <div class="container py-5" id="acc-parent">
       <ul class="nav nav-tabs nav-fill">
         <li class="nav-item">
@@ -208,18 +109,86 @@
           <div class="card-body">
             <p>I've been studying part time for about a year, and I am currently attending a <a href="http://www.coding-dojo.com">3-month full-time bootcamp</a> in San Jose to polish my skills. I'm studying 6-7 days a week for up to 12 hours a day, and every
               day I will generally complete 1-2 proof-of-concept webpages on a subject of study.</p>
-            <p>I won't ask you to believe that I'm a gifted developer. Instead, I'll tell you that I'm here at the Dojo every day until closing. On days when it's closed, I'm at a cafe, typing away in an editor. The more I learn, the more it seems I can
-              learn.</p>
+            <p>I won't ask you to believe that I'm a gifted developer. Instead, I'll tell you that I'm here at the Dojo every day until closing. On days when it's closed, I'm at a cafe, typing away in an editor. The more I practice, the more I learn, and
+              the more I learn, the better I practice.
+            </p>
             <p>That's why I've been working hard to lay the best foundation possible. I can now make a complete website with any desired features and full database support from scratch in multiple frameworks and programming languages. If you have an idea
               for the web, I'm confident that I can make it into a complete, live product, <em>even if I've never worked with the technology stack you're using before.</em> I'd be happy to provide a code sample with any technology stack upon request.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="mx-auto px-5">
+      <div>
+        <div class="card mt-5">
+          <div class="card-header">
+            <h2 class="slab" id="projectsheader">My Projects</h2>
+          </div>
+          <div class="card-body" id="project-container">
+            <% for (proj of projects) { %>
+              <button id="proj-btn-<%= proj._id %>" class="project" data-toggle="collapse" data-target=".proj-<%= proj.id %>" popover-text="<%= proj.name %>">
+              </button>
+              <% } %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card-body bg-light border-bottom" id="project-dropdown">
+        <% for (proj of projects) { %>
+          <div class="collapse proj-<%= proj._id %>" data-parent="#project-dropdown">
+            <div>
+              <h3>
+                <a href="<%= proj.github %>">
+                  <%= proj.name %>
+                </a>
+              </h3>
+              <p>
+                <%= proj.desc %>
+              </p>
+
+              <% if (proj.images.length) { %>
+                <h4>Visuals</h4>
+                <div class="d-flex flex-wrap justify-content-around w-100">
+                  <% for (img of proj.images) { %>
+                    <div class="img-box d-flex justify-content-center align-items-center">
+                      <a href="/img/<%= img %>">
+                  <img src="/img/<%= img %>">
+                </a>
+                    </div>
+                    <% } %>
+                </div>
+                <% } %>
+
+                  <h4>Key Elements</h4>
+                  <ul class="d-flex flex-wrap flex-align-center">
+                    <% for (ele of proj.key_elements) { %>
+                      <li class="my-1">
+                        <%- ele %>
+                      </li>
+                      <% } %>
+                  </ul>
+
+                  <h4>Status</h4>
+                  <p>
+                    <%= proj.status %>
+                  </p>
+
+                  <h4>Technologies</h4>
+                  <% for (tech of proj.technologies) {
+            if (icons[tech]) { %>
+                    <img src="img/<%= icons[tech] %>" class="icon-2" alt="<%= tech %> Logo">
+                    <% } %>
+                      <% } %>
+            </div>
+          </div>
+          <% } %>
+      </div>
+    </div>
+  </main>
 
   <footer class="mt-5 pt-4">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mx-0 px-0">
       <div class="col-3">
         <ul>
           <li>

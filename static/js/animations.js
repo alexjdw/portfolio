@@ -36,10 +36,15 @@ function animateDown(proj) {
 $(document).ready(function() {
     $('.project').each(function() {
         animateUp($(this));
+        $(this).popover({placement: 'top', content: $(this).attr('popover-text'), trigger: 'manual'});
         $(this).hover(function () {
             $(this).pause();
+            $(this).toggleClass('grow');
+            $(this).popover('show');
         }, function() {
             $(this).resume();
+            $(this).toggleClass('grow');
+            $(this).popover('hide');
         });
     });
 });
