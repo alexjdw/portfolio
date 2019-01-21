@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <title>Alex Weavers: Full-Stack Developer Portfolio</title>
+</head>
+
+<body>
+
+  <% for (item of result) { %>
+    <form class="m-5 p-5 d-inline-block" action="/admin/edit/<%= item._id %>" id="<%= item._id %>" method="POST" style="max-width:35rem; min-width: 30rem; vertical-align: top;">
+      <div class="form-group">
+        Name:
+        <input type="text" class="form-control" name="name" value="<%= item.name %>">
+      </div>
+      <div class="form-group">
+        Importance:
+        <input type="text" class="form-control" name="importance" value="<%= item.importance %>">
+      </div>
+      <div class="form-group">
+        GitHub:
+        <input type="text" class="form-control" name="github" value="<%= item.github %>">
+      </div>
+      <div class="form-group">
+        Desc:
+        <textarea class="form-control" name="desc">
+          <%= item.desc %>
+        </textarea>
+      </div>
+      <div class="form-group">
+        Images:<br>
+        <span id="<%= item._id %>-images"></span>
+        <% for (image of item.images) { %>
+          <input type="text" class="form-control image" value="<%= image %>">
+        <% } %>
+        <input type="hidden" name="image-list" value="">
+        <a class="add-image btn btn-primary text-white">+</a>
+      </div>
+      <div class="form-group">
+        Technologies (make sure to add icons):<br>
+        <span id="<%= item._id %>-technologies"></span>
+        <% for (technology of item.technologies) { %>
+          <input type="text" class="form-control technology" value="<%= technology %>">
+        <% } %>
+        <input type="hidden" name="technologies-list" value="">
+        <a class="add-tech btn btn-primary text-white">+</a>
+      </div>
+      <div class="form-group">
+        Key Elements:<br>
+        <span id="<%= item._id %>-keyelements"></span>
+        <% for (ele of item.key_elements) { %>
+          <input type="text" class="form-control key_element" value="<%= ele %>">
+        <% } %>
+        <input type="hidden" name="key_elements-list" value="">
+        <a class="add-ke btn btn-primary text-white">+</a>
+      </div>
+      <div class="form-group">
+        Status:
+        <input type="text" class="form-control" name="status" value="<%= item.status %>">
+      </div>
+    <button class="btn" type="submit">Submit</button>
+  </form>
+
+  <% } %>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+    function updateForm(form) {
+      console.log(form);
+      var id=form.attr('id');
+      console.log('#' + id + '-images');
+      $('#' + id + '-images').text('');
+      form.find('.image').each(function() {
+        $('#' + id + '-images').text($('#' + id + '-images').text() + '|' + $(this).val());
+      });
+      form.find('input[name=image-list]').val($('#' + id + '-images').text());
+
+      
+
+      $('#' + id + '-keyelements').text('');
+      form.find('.key_element').each(function() {
+        $('#' + id + '-keyelements').text($('#' + id + '-keyelements').text() + '|' + $(this).val());
+      });
+      form.find('input[name=key_elements-list]').val($('#' + id + '-keyelements').text());
+
+
+      $('#' + id + '-technologies').text('');
+      form.find('.technology').each(function() {
+        $('#' + id + '-technologies').text($('#' + id + '-technologies').text() + '|' + $(this).val());
+      });
+      form.find('input[name=technologies-list]').val($('#' + id + '-keyelements').text());
+    }
+
+    $(document).ready(function() {
+      $('form').each(function() {
+        updateForm($(this));
+      })
+      $('input.technology').keyup(function() {
+        updateForm($(this).parent().parent());
+      });
+      //$('input.image').keyup(update);
+      //$('input.key_element').keyup(update);
+    });
+  </script>
+  </body>
+
+</html>
