@@ -170,4 +170,38 @@ div#project-container {
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
 }
 
+.nav-item {
+  transition: background-color 0.4s;
+  padding: 0.25rem;
+  border-radius: 8px;
+}
+
+.nav-item.active {
+  background-color: #f7f7f7;
+}
+
+@media only screen and (max-width: 750px) {
+  .profile-pic {
+    top: 4rem;
+    height: 16rem;
+    width: 16rem;
+  }
+
+  .splash {
+    height: 18rem;
+  }
+
+  ul.tech {
+    display: none;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  ul.nav-tabs {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

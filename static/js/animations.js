@@ -47,4 +47,9 @@ $(document).ready(function() {
             $(this).popover('hide');
         });
     });
+
+    $('.nav-item button').click(function() {
+        $(this).parent().toggleClass('active');
+        $(this).parent().siblings().removeClass('active');
+    })
 });
