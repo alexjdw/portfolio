@@ -81,7 +81,7 @@ module.exports = function(app) {
             delete request.body['key_elements-list'];
 
             db.Project.updateOne({_id: request.params.id}, {$set: request.body}, function(error, result) {
-                if (error) response.send(error)
+                if (error) response.send(error);
                 else response.redirect('/admin/home');
             });
         } else {

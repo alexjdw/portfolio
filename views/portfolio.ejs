@@ -169,11 +169,10 @@
                   </ul>
 
                   <h4>Status</h4>
-                  <p>
+                  <p class="mb-3">
                     <%= proj.status %>
                   </p>
 
-                  <h4>Technologies</h4>
                   <% for (tech of proj.technologies) {
                     if (icons[tech]) { %>
                     <img src="img/<%= icons[tech] %>" class="icon-2" alt="<%= tech %> Logo">
