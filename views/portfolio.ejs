@@ -133,7 +133,6 @@
         </div>
       </div>
 
-
       <div class="card-body bg-light border-bottom" id="project-dropdown">
         <% for (proj of projects) { %>
           <div class="collapse proj-<%= proj._id %>" data-parent="#project-dropdown">
@@ -161,12 +160,12 @@
                 <% } %>
 
                   <h4>Key Elements</h4>
-                  <ul class="d-flex flex-wrap flex-align-center">
+                  <ul class="d-flex flex-column flex-md-row flex-wrap flex-align-center">
                     <% for (ele of proj.key_elements) { %>
                       <li class="my-1">
                         <%- ele %>
                       </li>
-                      <% } %>
+                    <% } %>
                   </ul>
 
                   <h4>Status</h4>
@@ -176,10 +175,10 @@
 
                   <h4>Technologies</h4>
                   <% for (tech of proj.technologies) {
-            if (icons[tech]) { %>
+                    if (icons[tech]) { %>
                     <img src="img/<%= icons[tech] %>" class="icon-2" alt="<%= tech %> Logo">
                     <% } %>
-                      <% } %>
+                  <% } %>
             </div>
           </div>
           <% } %>

@@ -83,7 +83,7 @@ module.exports = function(app) {
             db.Project.updateOne({_id: request.params.id}, {$set: request.body}, function(error, result) {
                 if (error) response.send(error)
                 else response.redirect('/admin/home');
-            })
+            });
         } else {
             response.redirect('/admin');
         }

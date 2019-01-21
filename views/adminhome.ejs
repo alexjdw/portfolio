@@ -97,7 +97,7 @@
       form.find('.technology').each(function() {
         $('#' + id + '-technologies').text($('#' + id + '-technologies').text() + '|' + $(this).val());
       });
-      form.find('input[name=technologies-list]').val($('#' + id + '-keyelements').text());
+      form.find('input[name=technologies-list]').val($('#' + id + '-technologies').text());
     }
 
     $(document).ready(function() {
